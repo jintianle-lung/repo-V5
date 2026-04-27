@@ -10,6 +10,20 @@ dynamic tactile sequence -> evidence gate -> residual size inversion -> size-con
 
 The detector first decides whether a 10-frame tactile window contains lesion-responsive evidence. After the detector threshold is fixed, the detector is frozen. A compact residual branch then estimates nodule size as the principal endpoint and estimates coarse depth as a conditional auxiliary endpoint.
 
+## Main Program
+
+Run the repository-level release wrapper from the project root:
+
+```bash
+python main.py --device cpu
+```
+
+This launches the released demo, re-runs File3 evaluation, and regenerates the main Score-CAM figure. For a fast smoke test, skip the CAM pass:
+
+```bash
+python main.py --device cpu --no-scorecam
+```
+
 ## Headline File3 Results
 
 | Block | Metric | Value |
@@ -24,10 +38,35 @@ The detector first decides whether a 10-frame tactile window contains lesion-res
 
 ![R5 task-guided Score-CAM](results/r5/cam_scorecam_taskguided_R5_auto.png)
 
+## Evaluation Figures
+
+### ROC / AUC Curves
+
+![Frozen detector ROC](results/r5/roc_frozen_detector_file3.png)
+
+![R5 inversion ROC](results/r5/roc_inversion_tasks.png)
+
+### Confusion Matrices
+
+![Size 7-class confusion](results/r5/confusion_size_7class.png)
+
+![Size 3-bin confusion](results/r5/confusion_size_3bin.png)
+
+![Depth 3-class confusion](results/r5/confusion_depth_3class.png)
+
+![Deep vs rest confusion](results/r5/confusion_deep_vs_rest.png)
+
+### Score-CAM / Saliency
+
+![Residual inversion contact sheet](results/r5/cam_residual_inversion_contact_sheet.png)
+
+![Task-guided Score-CAM](results/r5/cam_scorecam_taskguided_R5_auto.png)
+
 ## Package Layout
 
 ```text
 github_reviewer_release/
+  main.py                   # Repository-level wrapper for demo + evaluation
   tactile_inversion/        # Model code, training, evaluation, and Score-CAM CLIs
   data/raw/                 # Full tactile CSV dataset, 126 recordings
   data/labels/              # Active File1/File2/File3 manual labels
@@ -60,6 +99,12 @@ For a faster smoke test without regenerating Score-CAM:
 
 ```bash
 python -m tactile_inversion.demo --device cpu --no-scorecam
+```
+
+Or use the root-level wrapper:
+
+```bash
+python main.py --device cpu
 ```
 
 Recompute the File3 positive-window metrics from the released checkpoints:
@@ -104,4 +149,3 @@ The evaluation command should reproduce the released R5 metrics within normal de
 ## Data Usage
 
 The included tactile CSV files and labels are provided for research reproducibility of the submitted algorithm. Please cite the associated manuscript when using this dataset or release package.
-

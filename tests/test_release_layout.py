@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class ReleaseLayoutTest(unittest.TestCase):
     def test_required_assets_exist(self):
         required = [
+            "main.py",
+            "README.md",
             "data/labels/manual_keyframe_labels_file1.json",
             "data/labels/manual_keyframe_labels_file2.json",
             "data/labels/manual_keyframe_labels_file3.json",
@@ -17,6 +19,13 @@ class ReleaseLayoutTest(unittest.TestCase):
             "results/r5/best_model.pth",
             "results/r5/summary.json",
             "results/r5/cam_scorecam_taskguided_R5_auto.png",
+            "results/r5/cam_residual_inversion_contact_sheet.png",
+            "results/r5/roc_frozen_detector_file3.png",
+            "results/r5/roc_inversion_tasks.png",
+            "results/r5/confusion_size_7class.png",
+            "results/r5/confusion_size_3bin.png",
+            "results/r5/confusion_depth_3class.png",
+            "results/r5/confusion_deep_vs_rest.png",
         ]
         for item in required:
             self.assertTrue((ROOT / item).exists(), item)
@@ -36,4 +45,3 @@ class ReleaseLayoutTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
