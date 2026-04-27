@@ -56,9 +56,7 @@ python main.py --device cpu --no-scorecam
 
 ![Deep vs rest confusion](results/r5/confusion_deep_vs_rest.png)
 
-### Score-CAM / Saliency
-
-![Residual inversion contact sheet](results/r5/cam_residual_inversion_contact_sheet.png)
+### Score-CAM
 
 ![Task-guided Score-CAM](results/r5/cam_scorecam_taskguided_R5_auto.png)
 

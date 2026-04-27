@@ -19,7 +19,6 @@ class ReleaseLayoutTest(unittest.TestCase):
             "results/r5/best_model.pth",
             "results/r5/summary.json",
             "results/r5/cam_scorecam_taskguided_R5_auto.png",
-            "results/r5/cam_residual_inversion_contact_sheet.png",
             "results/r5/roc_frozen_detector_file3.png",
             "results/r5/roc_inversion_tasks.png",
             "results/r5/confusion_size_7class.png",
