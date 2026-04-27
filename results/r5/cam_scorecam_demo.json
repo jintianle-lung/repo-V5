@@ -1,0 +1,27 @@
+{
+  "output": "C:\\Users\\SWH\\.config\\superpowers\\worktrees\\GitHub_Docs_Package\\r5-repro-release\\github_reviewer_release\\results\\r5\\cam_scorecam_demo.png",
+  "method": "same sample for all stages; Score-CAM from frozen backbone raw-frame activations with task-specific forward scores with raw-response gating and task-guided display weighting",
+  "cam_method": "scorecam",
+  "scorecam_top_k": 3,
+  "scorecam_raw_gate": true,
+  "scorecam_task_guided": true,
+  "dpi": 260,
+  "sample_index": 1155,
+  "sample": {
+    "group_key": "1.75cm大|2.5cm深|3.CSV",
+    "base_group": "1.75cm大|2.5cm深",
+    "end_row": 203,
+    "true_size_cm": 1.75,
+    "true_depth_cm": 2.5
+  },
+  "prediction": {
+    "p_det": 0.8486259579658508,
+    "size_idx": 6,
+    "size_cm": 1.75,
+    "size_conf": 0.9968020915985107,
+    "size_reg_cm": 1.75,
+    "depth_idx": 2,
+    "depth_name": "deep",
+    "depth_conf": 0.9187966585159302
+  }
+}

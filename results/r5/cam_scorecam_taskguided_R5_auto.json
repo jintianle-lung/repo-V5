@@ -1,0 +1,27 @@
+{
+  "output": "C:\\Users\\SWH\\Desktop\\GitHub_Docs_Package\\latest_algorithm\\runs\\residual_tune_R5_hybrid_20260427\\cam_scorecam_taskguided_R5_auto.png",
+  "method": "same sample for all stages; Score-CAM from frozen backbone raw-frame activations with task-specific forward scores with raw-response gating and task-guided display weighting",
+  "cam_method": "scorecam",
+  "scorecam_top_k": 3,
+  "scorecam_raw_gate": true,
+  "scorecam_task_guided": true,
+  "dpi": 520,
+  "sample_index": 1155,
+  "sample": {
+    "group_key": "1.75cm大|2.5cm深|3.CSV",
+    "base_group": "1.75cm大|2.5cm深",
+    "end_row": 203,
+    "true_size_cm": 1.75,
+    "true_depth_cm": 2.5
+  },
+  "prediction": {
+    "p_det": 0.848609983921051,
+    "size_idx": 6,
+    "size_cm": 1.75,
+    "size_conf": 0.9968032836914062,
+    "size_reg_cm": 1.75,
+    "depth_idx": 2,
+    "depth_name": "deep",
+    "depth_conf": 0.9186552166938782
+  }
+}

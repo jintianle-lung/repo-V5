@@ -1,0 +1,6 @@
+﻿comparison,n,agreement,cohen_kappa
+size_7class_coarse_vs_size_3bin,1385,0.940072202166065,0.9024906015037594
+size_reg_nearest_coarse_vs_size_3bin,1385,0.9097472924187726,0.8557280846273014
+depth_3class_deep_flag_vs_deep_binary,1385,0.9638989169675091,0.9029380681802255
+gated_size_7class_coarse_vs_size_3bin,1282,0.9375975039001561,0.9002875870879425
+gated_depth_3class_deep_flag_vs_deep_binary,1282,0.9641185647425897,0.9038218783535621

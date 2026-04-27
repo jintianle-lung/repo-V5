@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+results/retrained_detector/
+results/retrained_r5/
+
